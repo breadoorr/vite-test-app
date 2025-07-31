@@ -1,29 +1,63 @@
-# untitled
+# Тестовое задание для Vue Frontend Developer
 
-This template should help get you started developing with Vue 3 in Vite.
+## Описание проекта
 
-## Recommended IDE Setup
+Проект представляет собой форму управления учетными записями, реализованную с использованием Vue.js 3, TypeScript, Pinia и Vuetify.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Функциональность
 
-## Customize configuration
+- Отображение списка учетных записей
+- Добавление новых учетных записей
+- Удаление учетных записей
+- Редактирование учетных записей с валидацией полей
+- Сохранение учетных записей в localStorage
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Технологии
 
-## Project Setup
+- Vue.js 3 + Composition API
+- TypeScript
+- Pinia (стейт менеджер)
+- Vuetify (UI фреймворк)
+- Vite (сборщик)
 
-```sh
+## Установка и запуск
+
+```bash
+# Установка зависимостей
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# Запуск в режиме разработки
 npm run dev
-```
 
-### Compile and Minify for Production
-
-```sh
+# Сборка для продакшена
 npm run build
+
+# Предпросмотр сборки
+npm run preview
 ```
+
+## Структура проекта
+
+- `src/components/accounts` - Компоненты для управления учетными записями
+- `src/stores` - Pinia хранилища
+- `src/types` - TypeScript типы и интерфейсы
+
+## Особенности реализации
+
+### Учетная запись
+
+Каждая учетная запись содержит следующие поля:
+- **Метка** - Необязательное поле, максимум 50 символов. Метки вводятся через знак `;`
+- **Тип записи** - Выпадающий список с вариантами LDAP и Локальная
+- **Логин** - Обязательное поле, максимум 100 символов
+- **Пароль** - Обязательное поле для локальных учетных записей, максимум 100 символов
+
+### Валидация
+
+- Логин: обязательное поле, максимум 100 символов
+- Пароль: обязательное поле для локальных учетных записей, максимум 100 символов
+- Метка: необязательное поле, максимум 50 символов
+
+### Хранение данных
+
+Данные сохраняются в localStorage браузера, что обеспечивает их сохранность при обновлении страницы.
