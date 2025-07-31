@@ -21,6 +21,7 @@ import AccountsForm from './components/accounts/AccountsForm.vue'
   align-items: center;
   min-height: 100vh;
   width: 100%;
+  min-width: 90vw;
 }
 
 body {

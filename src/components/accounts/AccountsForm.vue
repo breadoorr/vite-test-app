@@ -44,8 +44,8 @@ const deleteAccount = (id: string) => {
 
 <style scoped>
 .accounts-form {
-  max-width: 1400px;
-  width: 90%;
+  width: 100%;
+  min-width: 600px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -77,6 +77,7 @@ h1 {
   justify-content: center;
   position: absolute;
   right: 0;
+  text-align: center;
 }
 
 .add-button:hover {

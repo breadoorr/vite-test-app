@@ -178,7 +178,7 @@ const deleteAccount = () => {
 .account-fields {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Increased minimum width */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Increased minimum width for better utilization of wider container */
   gap: 20px; /* Increased gap */
 }
 
