@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import { useAccountStore } from '@/stores/accountStore';
+import { useNotificationStore } from '@/stores/notificationStore';
 import AccountItem from './AccountItem.vue';
 
 const accountStore = useAccountStore();
+const notificationStore = useNotificationStore();
 
 // Initialize the store when the component is mounted
 onMounted(() => {
@@ -12,7 +14,14 @@ onMounted(() => {
 });
 
 const addAccount = () => {
-  accountStore.addAccount();
+  const newAccount = accountStore.addAccount();
+  
+  // Show a success notification when a new account is created
+  notificationStore.addNotification({
+    message: 'Новая учетная запись успешно создана',
+    type: 'success',
+    timeout: 3000
+  });
 };
 
 const deleteAccount = (id: string) => {
@@ -77,7 +86,6 @@ h1 {
   justify-content: center;
   position: absolute;
   right: 0;
-  text-align: center;
 }
 
 .add-button:hover {

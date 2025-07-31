@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import AccountsForm from './components/accounts/AccountsForm.vue'
+import NotificationList from './components/notifications/NotificationList.vue'
 </script>
 
 <template>
   <div class="app">
     <AccountsForm />
+    <NotificationList />
   </div>
 </template>
 
